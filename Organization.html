@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+{
+  font-family: 'Lato', sans-serif;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+/* muhammad amir firdaus bin zaidin 1716549 */
+.tablink {
+  background-color: #ffffff;
+  color:black;
+  float: left;
+  font-family:Cooper Black;
+  border: none;
+
+  cursor: pointer;
+  padding-top:40px;
+  font-size: 17px;
+  width: 16.65%;
+  height: 100px;
+  text-align:center;
+   display: inline-block;
+    text-decoration: none;
+
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.tablink1 {
+  background-color: #ffffff;
+  color:black;
+  float: left;
+  font-family:Cooper Black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding-top:20px;
+  font-size: 17px;
+  width: 16.65%;
+  height: 100px;
+  text-align:center;
+
+}
+
+/* muhammad amir firdaus bin zaidin 1716549 */
+.tablink:hover {
+  background-color: #cc6600;
+}/* muhammad amir firdaus bin zaidin 1716549 */
+.tablink2{
+width: 100%;
+height: 50px;
+background-color: #ffcccc;
+}
+
+
+/* muhammad amir firdaus bin zaidin 1716549 */
+* {
+  box-sizing: border-box;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  height:10px;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  height:15px;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+form.example button:hover {
+  background: #0b7dda;
+
+
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+  height:15px;
+}/* muhammad amir firdaus bin zaidin 1716549 */
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+
+  position: relative;
+  margin: auto;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* muhammad amir firdaus bin zaidin 1716549 *//* muhammad amir firdaus bin zaidin 1716549 */
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* muhammad amir firdaus bin zaidin 1716549 */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.active, .dot:hover {
+  background-color: #717171;
+}
+/* muhammad amir firdaus bin zaidin 1716549 *//* muhammad amir firdaus bin zaidin 1716549 */
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}/* muhammad amir firdaus bin zaidin 1716549 */
+.image97{
+width:100%;
+height:400px;
+}
+* {
+  box-sizing: border-box;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.left {
+  width: 75%;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.right {
+  width: 25%;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}/* muhammad amir firdaus bin zaidin 1716549 *//* muhammad amir firdaus bin zaidin 1716549 */
+.contact4{
+font-family: Comic Sans MS;
+  font-size: 15px;
+  float:left;
+  background-color:#262626;
+  width: 100%;
+  color:white;
+
+  padding-left:70px;
+}/* muhammad amir firdaus bin zaidin 1716549 */
+.mySlides1 {display:none;
+height:250px;
+}/* muhammad amir firdaus bin zaidin 1716549 */
+.ex3 {
+  background-color:#e6ffff;
+  width: 220px;
+  height: 150px;
+  overflow: auto;
+  color:black;
+
+}
+
+/* muhammad amir firdaus bin zaidin 1716549 */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+    padding: 0 8px;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.column3 {
+  float: left;
+  width: 25%;
+    padding: 0 8px;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.mySlides34 {
+  display: none;
+}/* muhammad amir firdaus bin zaidin 1716549 *//* muhammad amir firdaus bin zaidin 1716549 */
+
+.cursor {
+  cursor: pointer;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* muhammad amir firdaus bin zaidin 1716549 *//* muhammad amir firdaus bin zaidin 1716549 */
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+img23 {
+  margin-bottom: -4px;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.demo {
+  opacity: 0.6;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+img.hover-shadow {
+  transition: 0.3s;
+}
+/* muhammad amir firdaus bin zaidin 1716549 */
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*Muhammad Faiq Aiman*/
+/*Now the CSS*/
+* { 
+  margin: 0; 
+  padding: 0;
+}
+
+.tree {
+  font-family: 'Avenir Book', sans-serif;
+  width:1000px;
+  margin:0 auto;
+}
+
+.tree ul {
+  padding-top: 20px; 
+  position: relative;
+  
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.tree li {
+  float: left; 
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+  content: '';
+  position: absolute; top: 0; right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%; height: 20px;
+}
+.tree li::after{
+  right: auto; left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+  border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+  content: '';
+  position: absolute; top: 0; left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0; height: 20px;
+}
+
+/************************************************
+ * Third Level Styles
+ ************************************************/
+
+.tree ul ul ul {
+  max-width:140px;
+}
+.tree ul ul ul li {
+  float: left; 
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 0 5px 10px 5px;
+  border-left: 1px solid #ccc;
+  border-left:0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  margin-left:10px;
+  top:-10px;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree ul ul ul li:before {
+  border-top: 1px solid #ccc;
+  position:relative;
+  top:20%;
+  width:10%;
+}
+.tree ul ul ul li::after{
+  right: auto; 
+  left: -1px;
+  border-left: 1px solid #ccc;
+  border-bottom:1px;
+  height:70px;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree ul ul ul li:only-child::after, .tree ul ul ul li:only-child::before {
+  display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree ul ul ul li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree ul ul ul li:first-child::before, 
+.tree ul ul ul li:last-child::after{
+  border:none;
+  
+}
+
+.tree ul ul ul li:last-child::after {
+  border-bottom:1px solid #ccc;
+  top:-52px;
+  width:7px;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree ul ul ul li:last-child::before{
+  border-right: 0;
+    border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -moz-border-radius: 0 0 0 0;
+
+}
+.tree ul ul ul li:first-child::after{
+  border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -moz-border-radius: 0 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul ul::before{
+  content: '';
+  position: absolute; 
+  top: 0; 
+  left:9px;
+  border-left: 1px solid #ccc;
+  width: 0; 
+  height: 100;
+}
+
+.tree ul ul ul li img {
+  margin:0;
+  padding:0;
+  padding-right:3px;
+}
+
+/*******************************/
+
+.tree li a{
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #666;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 12px;
+  display: inline-block;
+  
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover+ul li a {
+  background: #ea1519; color: #fff; border: 1px solid #ea1519;
+}
+
+.tree ul ul ul li a:hover {
+  border-color: #ccc;
+}
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before {
+  border-color:  #ea1519;
+}
+
+.tree li a {
+  max-width:110px;
+}
+.tree li a img {
+  float:left;
+  margin-bottom:5px;
+  border-radius:5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;  
+}
+.box{
+  background-color: white;
+  width: 500px;
+  height:750px;
+  border: 15px solid black;
+  padding: 50px;
+  margin: 20px;
+}
+
+/*Muhammad Faiq Aiman*/
+</style>
+   <script src="../javascripts/prototype.js"></script>
+    <script src="../javascripts/calendarview.js"></script>
+
+</head>
+<body style="background-color:#ffcccc" align=center><!-- muhammad amir firdaus bin zaidin (1716548) -->
+
+
+<div class="tablink2"> <!-- muhammad amir firdaus bin zaidin (1716548) -->
+
+<br>
+<!-- muhammad amir firdaus bin zaidin (1716548) --><!-- muhammad amir firdaus bin zaidin (1716548) -->
+<form class="example" action="/action_page.php" style="padding-left:100px;max-width:300px; height:100px ">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+  
+  
+  <div id="google_translate_element" style="padding-left:300px;max-width:300px; height:200px "></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="element.js"></script>
+
+</form>
+</div>
+<!-- muhammad amir firdaus bin zaidin (1716548) -->
+<a href="logan1.html" class="tablink1"><img src="../logann/images/genting.jpg" width=200px height=80px> </a>
+<a href="About.html"class="tablink" >ABOUT SURAU </a>
+<a href="program.html"class="tablink">PROGRAM</a>
+<a href="service.html" class="tablink">SERVICE</a>
+<a href="Organization.html"class="tablink">ORGANIZATION</a>
+<a href="Contact.html"class="tablink">CONTACT </a>
+<br>
+
+<!-- muhammad amir firdaus bin zaidin (1716548) -->
+
+<div class="slideshow-container" >
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+ <img src="../logann/images/s1.jpeg" class="image97">
+
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="l../logann/images/s2.jpeg" class="image97">
+
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="../logann/images/s3.jpeg" class="image97">
+
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<table border=6 width=80% align=center style="background-color:white" >
+<!-- muhammad amir firdaus bin zaidin (1716548) -->
+<tr><td colspan=2 align=center><nav>
+<p style="font-family:Comic Sans MS; font-size:40px; color:black; font-weight:bold; border:2px solid; border-color:black;border-radius:15px;background-color:#ff8080">
+ WELCOME TO WEBSITE <br>SURAU FATIMAH AZ-ZAHRA
+</p><!-- muhammad amir firdaus bin zaidin (1716548) -->
+<!--Muhammad Faiq Aiman bin Hermi 1711817-->
+<h1><center>ORGANIZATION</hi>
+<div class="tree">
+<div class="box">
+<ul>
+	<li>
+	<a><img src="Pengerusi.jpg" height="110" width="90" alt="President"><br>
+	President<br>Sohaimi Mohd Abd Rani</a>
+<ul>
+
+<a><img src="Naib_Pengerusi.jpg"height="110" width="90" alt="Vice President">
+Vice President<br>Che Mohd Zulkifli Ismail</a>
+	</ul>
+
+		<ul>
+			<li><a ><img src="Setiausaha.jpg" height="110" width="90" alt="Setiausaha">Secretary<br>Anuar bin Salimin</a>
+				
+			</li>
+			<li><a ><img src="Penolong_Setiausaha.jpg" height="110" width="90" alt="Vice Secretary">Vice Secretary<br>Taufik bin Haji Abu</a>
+				
+			</li>
+			<li><a><img src="Bendahari.jpg" height="110" width="90" alt="Treasurer" />Treasurer<br>Mat Fauzee bin Zainuddin</a>
+				
+			</li>
+		
+		
+	</ul>
+	
+	
+	</li>
+	
+	</ul>
+</div>
+	</div>
+<!--Muhammad Faiq Aiman bin Hermi 1711817-->
+<!-- muhammad amir firdaus bin zaidin (1716548) -->
+<aside><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<td align="center" width=20% style="background-color:white">
+<h1 style="border: 2px solid; border-color:black"><font face="Arial" color="EC1E11">TIME PRAYER</h1>
+<canvas id="canvas" width="180" height="180"
+style="background-color:white">
+</canvas>
+
+<script><!-- muhammad amir firdaus bin zaidin (1716548) -->
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script><!-- muhammad amir firdaus bin zaidin (1716548) -->
+<table style=" border-collapse: collapse; width: 100%; text-align: left; padding: 8 ; background-color:#ff8080 ;font-family: arial; color:black" >
+  <tr>
+  <p style=" color:black; font-size:12px; font-family:Comic Sans MS ">
+  Monday, April 27,2019
+  <br>
+   21 shaaban 1440
+
+  </p>
+
+  </tr>
+  <tr>
+  <td>Fajr</td>
+  <td>05:50</td>
+
+  </tr>
+  <tr>
+  <td>Sunrise</td>
+  <td>07:06</td>
+
+  </tr>
+  <tr>
+  <td>Dhuhr</td>
+  <td>13:15</td>
+
+  </tr>
+  <tr>
+  <td>Asr</td>
+  <td>16:28</td>
+
+  </tr>
+  <tr>
+  <td>Maghrib</td>
+  <td>19:21</td>
+
+  </tr>
+  <tr>
+  <td>Isha'a</td>
+  <td>20:31</td>
+
+  </tr>
+</table><!-- muhammad amir firdaus bin zaidin (1716548) -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <img src="../logann/images/ayat.jpg" >
+
+  </div>
+
+</div>
+
+</p>
+<br>
+<br>
+
+<!-- muhammad amir firdaus bin zaidin (1716548) -->
+<h1 style="border: 2px solid; border-color:black;"><font face="Arial" color="EC1E11">Al-qu'ran</h1>
+<span style="cursor:pointer;font-size:30px;font-weight:bold; font-size:25px"><font face="Comic Sans MS" color="black" onclick="openNav()"> Ayat Kursi</span>
+
+<br>
+<br>
+<br>
+<!-- muhammad amir firdaus bin zaidin (1716548) -->
+<img src="../logann/images/s3.png">
+<br>
+<h1 style="border: 2px solid; border-color:black;"><font face="Arial" color="EC1E11">ISLAM NEWS </h1>
+<div align="left" class="ex3">Christchurch, New Zealand - Thousands of New Zealanders have attended a mass vigil in Christchurch to mourn the 50 Muslims killed in an attack on two mosques.
+
+Nearly 40,000 people filled Christchurch's Hagley Park on Saturday evening, according to local officials, almost 10 days after a suspected white supremacist attacked the Al Noor and Linwood mosques.</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</aside>
+<br>
+
+
+
+</table>
+<!-- muhammad amir firdaus bin zaidin (1716548) -->
+ <div class="contact4">
+<footer>
+<p style= "color:red; font-weight:bold; "> VISITOR WELCOME</p>
+<p> Copyright © reserved by Surau Fatimah Az-Zahra </p>
+<p> Address: Surau Fatimah Az-Zahra
+<br>
+30,jalan Dg 1/5,Taman Desa
+Gemilang,53100 Kuala Lumpur,
+Selangor
+<br>
+Contact : 0177080288 (Amir Firdaus)
+<br>
+
+</div>
+<!-- muhammad amir firdaus bin zaidin (1716548) -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<!-- muhammad amir firdaus bin zaidin (1716548) -->
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<!-- muhammad amir firdaus bin zaidin (1716548) -->
+</script>
+   <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides1");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<!-- muhammad amir firdaus bin zaidin (1716548) --><!-- muhammad amir firdaus bin zaidin (1716548) -->
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+</html>
